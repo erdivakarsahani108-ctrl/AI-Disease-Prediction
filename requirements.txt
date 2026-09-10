@@ -53,4 +53,10 @@ jupyter_client>=8.6
 # umap-learn        -> optional UMAP embedding (PCA/t-SNE used by default)
 # SpeechRecognition -> optional voice input (requires PyAudio/microphone)
 # sentence-transformers -> optional semantic embeddings for symptom search
+#
+# Declared project tech stack (see README.md -> Technology Stack) not yet
+# used by the current implementation - uncomment when the corresponding
+# feature (see src/models/README.md, database/README.md) is built:
+# tensorflow>=2.16     -> deep-learning model experiments (src/models/)
+# mysql-connector-python>=8.3  -> MySQL persistence layer (database/, src/database/)
 # ==========================================================

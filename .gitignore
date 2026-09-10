@@ -24,6 +24,11 @@ Thumbs.db
 # Streamlit
 .streamlit/secrets.toml
 
+# Database (MySQL local dumps/credentials - never commit real data/secrets)
+*.sql.bak
+database/*.cnf
+database/local_backup/
+
 # Logs
 *.log
 
