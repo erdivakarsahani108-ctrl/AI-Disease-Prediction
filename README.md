@@ -312,6 +312,12 @@ container running `streamlit run app.py --server.port <port>
 core functionality - see [`docs/architecture.md`](docs/architecture.md)
 for the optional-integration points if you wish to extend it.
 
+**Step-by-step GitHub + Streamlit Community Cloud publishing instructions:**
+[`docs/deployment_guide.md`](docs/deployment_guide.md) (the local Git
+repository is already initialized and committed; GitHub CLI is installed
+and ready - you just need to run `gh auth login --web` once with your own
+GitHub account).
+
 ## Testing
 
 ```powershell
