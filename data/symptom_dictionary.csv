@@ -1,0 +1,132 @@
+symptom,display_name,severity_weight,severity_band,associated_disease_count,associated_diseases_sample,source,verification_date
+abdominal_pain,Abdominal Pain,4,Moderate,9,"Alcoholic hepatitis, Chronic cholestasis, Hepatitis B, Hepatitis D, Hepatitis E",Symptom-severity.csv (public dataset),2026-09-10
+abnormal_menstruation,Abnormal Menstruation,6,High,2,"Hyperthyroidism, Hypothyroidism",Symptom-severity.csv (public dataset),2026-09-10
+acidity,Acidity,3,Low,2,"GERD, Migraine",Symptom-severity.csv (public dataset),2026-09-10
+acute_liver_failure,Acute Liver Failure,6,High,1,Hepatitis E,Symptom-severity.csv (public dataset),2026-09-10
+altered_sensorium,Altered Sensorium,2,Low,1,Paralysis (brain hemorrhage),Symptom-severity.csv (public dataset),2026-09-10
+anxiety,Anxiety,4,Moderate,1,Hypoglycemia,Symptom-severity.csv (public dataset),2026-09-10
+back_pain,Back Pain,3,Low,2,"Cervical spondylosis, Dengue",Symptom-severity.csv (public dataset),2026-09-10
+belly_pain,Belly Pain,4,Moderate,1,Typhoid,Symptom-severity.csv (public dataset),2026-09-10
+blackheads,Blackheads,2,Low,1,Acne,Symptom-severity.csv (public dataset),2026-09-10
+bladder_discomfort,Bladder Discomfort,4,Moderate,1,Urinary tract infection,Symptom-severity.csv (public dataset),2026-09-10
+blister,Blister,4,Moderate,1,Impetigo,Symptom-severity.csv (public dataset),2026-09-10
+blood_in_sputum,Blood In Sputum,5,Moderate,1,Tuberculosis,Symptom-severity.csv (public dataset),2026-09-10
+bloody_stool,Bloody Stool,5,Moderate,1,Dimorphic hemmorhoids(piles),Symptom-severity.csv (public dataset),2026-09-10
+blurred_and_distorted_vision,Blurred And Distorted Vision,5,Moderate,3,"Diabetes, Hypoglycemia, Migraine",Symptom-severity.csv (public dataset),2026-09-10
+breathlessness,Breathlessness,4,Moderate,4,"Bronchial Asthma, Heart attack, Pneumonia, Tuberculosis",Symptom-severity.csv (public dataset),2026-09-10
+brittle_nails,Brittle Nails,5,Moderate,1,Hypothyroidism,Symptom-severity.csv (public dataset),2026-09-10
+bruising,Bruising,4,Moderate,1,Varicose veins,Symptom-severity.csv (public dataset),2026-09-10
+burning_micturition,Burning Micturition,6,High,2,"Drug Reaction, Urinary tract infection",Symptom-severity.csv (public dataset),2026-09-10
+chest_pain,Chest Pain,7,High,6,"Common Cold, GERD, Heart attack, Hypertension, Pneumonia",Symptom-severity.csv (public dataset),2026-09-10
+chills,Chills,3,Low,7,"Allergy, Common Cold, Dengue, Malaria, Pneumonia",Symptom-severity.csv (public dataset),2026-09-10
+cold_hands_and_feets,Cold Hands And Feets,5,Moderate,1,Hypothyroidism,Symptom-severity.csv (public dataset),2026-09-10
+coma,Coma,7,High,1,Hepatitis E,Symptom-severity.csv (public dataset),2026-09-10
+congestion,Congestion,5,Moderate,1,Common Cold,Symptom-severity.csv (public dataset),2026-09-10
+constipation,Constipation,4,Moderate,2,"Dimorphic hemmorhoids(piles), Typhoid",Symptom-severity.csv (public dataset),2026-09-10
+continuous_feel_of_urine,Continuous Feel Of Urine,6,High,1,Urinary tract infection,Symptom-severity.csv (public dataset),2026-09-10
+continuous_sneezing,Continuous Sneezing,4,Moderate,2,"Allergy, Common Cold",Symptom-severity.csv (public dataset),2026-09-10
+cough,Cough,4,Moderate,5,"Bronchial Asthma, Common Cold, GERD, Pneumonia, Tuberculosis",Symptom-severity.csv (public dataset),2026-09-10
+cramps,Cramps,4,Moderate,1,Varicose veins,Symptom-severity.csv (public dataset),2026-09-10
+dark_urine,Dark Urine,4,Moderate,5,"Hepatitis B, Hepatitis D, Hepatitis E, Jaundice, hepatitis A",Symptom-severity.csv (public dataset),2026-09-10
+dehydration,Dehydration,4,Moderate,1,Gastroenteritis,Symptom-severity.csv (public dataset),2026-09-10
+depression,Depression,3,Low,2,"Hypothyroidism, Migraine",Symptom-severity.csv (public dataset),2026-09-10
+diarrhoea,Diarrhoea,6,High,5,"Gastroenteritis, Hyperthyroidism, Malaria, Typhoid, hepatitis A",Symptom-severity.csv (public dataset),2026-09-10
+dischromic_patches,Dischromic Patches,6,High,1,Fungal infection,Symptom-severity.csv (public dataset),2026-09-10
+distention_of_abdomen,Distention Of Abdomen,4,Moderate,1,Alcoholic hepatitis,Symptom-severity.csv (public dataset),2026-09-10
+dizziness,Dizziness,4,Moderate,3,"Cervical spondylosis, Hypertension, Hypothyroidism",Symptom-severity.csv (public dataset),2026-09-10
+drying_and_tingling_lips,Drying And Tingling Lips,4,Moderate,1,Hypoglycemia,Symptom-severity.csv (public dataset),2026-09-10
+enlarged_thyroid,Enlarged Thyroid,6,High,1,Hypothyroidism,Symptom-severity.csv (public dataset),2026-09-10
+excessive_hunger,Excessive Hunger,4,Moderate,4,"Diabetes, Hyperthyroidism, Hypoglycemia, Migraine",Symptom-severity.csv (public dataset),2026-09-10
+extra_marital_contacts,Extra Marital Contacts,5,Moderate,1,AIDS,Symptom-severity.csv (public dataset),2026-09-10
+family_history,Family History,5,Moderate,2,"Bronchial Asthma, Hepatitis C",Symptom-severity.csv (public dataset),2026-09-10
+fast_heart_rate,Fast Heart Rate,5,Moderate,2,"Hyperthyroidism, Pneumonia",Symptom-severity.csv (public dataset),2026-09-10
+fatigue,Fatigue,4,Moderate,17,"Bronchial Asthma, Chicken pox, Common Cold, Dengue, Diabetes",Symptom-severity.csv (public dataset),2026-09-10
+fluid_overload,Fluid Overload,6,High,1,Alcoholic hepatitis,Symptom-severity.csv (public dataset),2026-09-10
+foul_smell_ofurine,Foul Smell Ofurine,5,Moderate,1,Urinary tract infection,Symptom-severity.csv (public dataset),2026-09-10
+headache,Headache,3,Low,10,"(vertigo) Paroymsal  Positional Vertigo, Chicken pox, Common Cold, Dengue, Hypertension",Symptom-severity.csv (public dataset),2026-09-10
+high_fever,High Fever,7,High,12,"AIDS, Bronchial Asthma, Chicken pox, Common Cold, Dengue",Symptom-severity.csv (public dataset),2026-09-10
+hip_joint_pain,Hip Joint Pain,2,Low,1,Osteoarthristis,Symptom-severity.csv (public dataset),2026-09-10
+history_of_alcohol_consumption,History Of Alcohol Consumption,5,Moderate,1,Alcoholic hepatitis,Symptom-severity.csv (public dataset),2026-09-10
+increased_appetite,Increased Appetite,5,Moderate,1,Diabetes,Symptom-severity.csv (public dataset),2026-09-10
+indigestion,Indigestion,5,Moderate,2,"Migraine, Peptic ulcer diseae",Symptom-severity.csv (public dataset),2026-09-10
+inflammatory_nails,Inflammatory Nails,2,Low,1,Psoriasis,Symptom-severity.csv (public dataset),2026-09-10
+internal_itching,Internal Itching,4,Moderate,1,Peptic ulcer diseae,Symptom-severity.csv (public dataset),2026-09-10
+irregular_sugar_level,Irregular Sugar Level,5,Moderate,1,Diabetes,Symptom-severity.csv (public dataset),2026-09-10
+irritability,Irritability,2,Low,4,"Hyperthyroidism, Hypoglycemia, Hypothyroidism, Migraine",Symptom-severity.csv (public dataset),2026-09-10
+irritation_in_anus,Irritation In Anus,6,High,1,Dimorphic hemmorhoids(piles),Symptom-severity.csv (public dataset),2026-09-10
+itching,Itching,1,Low,6,"Chicken pox, Chronic cholestasis, Drug Reaction, Fungal infection, Hepatitis B",Symptom-severity.csv (public dataset),2026-09-10
+joint_pain,Joint Pain,3,Low,6,"Dengue, Hepatitis D, Hepatitis E, Osteoarthristis, Psoriasis",Symptom-severity.csv (public dataset),2026-09-10
+knee_pain,Knee Pain,3,Low,1,Osteoarthristis,Symptom-severity.csv (public dataset),2026-09-10
+lack_of_concentration,Lack Of Concentration,3,Low,1,Hypertension,Symptom-severity.csv (public dataset),2026-09-10
+lethargy,Lethargy,2,Low,4,"Chicken pox, Diabetes, Hepatitis B, Hypothyroidism",Symptom-severity.csv (public dataset),2026-09-10
+loss_of_appetite,Loss Of Appetite,4,Moderate,10,"Chicken pox, Chronic cholestasis, Dengue, Hepatitis B, Hepatitis C",Symptom-severity.csv (public dataset),2026-09-10
+loss_of_balance,Loss Of Balance,4,Moderate,3,"(vertigo) Paroymsal  Positional Vertigo, Cervical spondylosis, Hypertension",Symptom-severity.csv (public dataset),2026-09-10
+loss_of_smell,Loss Of Smell,3,Low,1,Common Cold,Symptom-severity.csv (public dataset),2026-09-10
+malaise,Malaise,6,High,6,"Chicken pox, Common Cold, Dengue, Hepatitis B, Pneumonia",Symptom-severity.csv (public dataset),2026-09-10
+mild_fever,Mild Fever,5,Moderate,3,"Chicken pox, Tuberculosis, hepatitis A",Symptom-severity.csv (public dataset),2026-09-10
+mood_swings,Mood Swings,3,Low,2,"Hyperthyroidism, Hypothyroidism",Symptom-severity.csv (public dataset),2026-09-10
+movement_stiffness,Movement Stiffness,5,Moderate,1,Arthritis,Symptom-severity.csv (public dataset),2026-09-10
+mucoid_sputum,Mucoid Sputum,4,Moderate,1,Bronchial Asthma,Symptom-severity.csv (public dataset),2026-09-10
+muscle_pain,Muscle Pain,2,Low,4,"Common Cold, Dengue, Malaria, hepatitis A",Symptom-severity.csv (public dataset),2026-09-10
+muscle_wasting,Muscle Wasting,3,Low,1,AIDS,Symptom-severity.csv (public dataset),2026-09-10
+muscle_weakness,Muscle Weakness,2,Low,2,"Arthritis, Hyperthyroidism",Symptom-severity.csv (public dataset),2026-09-10
+nausea,Nausea,5,Moderate,10,"(vertigo) Paroymsal  Positional Vertigo, Chronic cholestasis, Dengue, Hepatitis C, Hepatitis D",Symptom-severity.csv (public dataset),2026-09-10
+neck_pain,Neck Pain,5,Moderate,2,"Cervical spondylosis, Osteoarthristis",Symptom-severity.csv (public dataset),2026-09-10
+nodal_skin_eruptions,Nodal Skin Eruptions,4,Moderate,1,Fungal infection,Symptom-severity.csv (public dataset),2026-09-10
+obesity,Obesity,4,Moderate,2,"Diabetes, Varicose veins",Symptom-severity.csv (public dataset),2026-09-10
+pain_behind_the_eyes,Pain Behind The Eyes,4,Moderate,1,Dengue,Symptom-severity.csv (public dataset),2026-09-10
+pain_during_bowel_movements,Pain During Bowel Movements,5,Moderate,1,Dimorphic hemmorhoids(piles),Symptom-severity.csv (public dataset),2026-09-10
+pain_in_anal_region,Pain In Anal Region,6,High,1,Dimorphic hemmorhoids(piles),Symptom-severity.csv (public dataset),2026-09-10
+painful_walking,Painful Walking,2,Low,2,"Arthritis, Osteoarthristis",Symptom-severity.csv (public dataset),2026-09-10
+palpitations,Palpitations,4,Moderate,1,Hypoglycemia,Symptom-severity.csv (public dataset),2026-09-10
+passage_of_gases,Passage Of Gases,5,Moderate,1,Peptic ulcer diseae,Symptom-severity.csv (public dataset),2026-09-10
+patches_in_throat,Patches In Throat,6,High,1,AIDS,Symptom-severity.csv (public dataset),2026-09-10
+phlegm,Phlegm,5,Moderate,3,"Common Cold, Pneumonia, Tuberculosis",Symptom-severity.csv (public dataset),2026-09-10
+polyuria,Polyuria,4,Moderate,1,Diabetes,Symptom-severity.csv (public dataset),2026-09-10
+prominent_veins_on_calf,Prominent Veins On Calf,6,High,1,Varicose veins,Symptom-severity.csv (public dataset),2026-09-10
+puffy_face_and_eyes,Puffy Face And Eyes,5,Moderate,1,Hypothyroidism,Symptom-severity.csv (public dataset),2026-09-10
+pus_filled_pimples,Pus Filled Pimples,2,Low,1,Acne,Symptom-severity.csv (public dataset),2026-09-10
+receiving_blood_transfusion,Receiving Blood Transfusion,5,Moderate,1,Hepatitis B,Symptom-severity.csv (public dataset),2026-09-10
+receiving_unsterile_injections,Receiving Unsterile Injections,2,Low,1,Hepatitis B,Symptom-severity.csv (public dataset),2026-09-10
+red_sore_around_nose,Red Sore Around Nose,2,Low,1,Impetigo,Symptom-severity.csv (public dataset),2026-09-10
+red_spots_over_body,Red Spots Over Body,3,Low,2,"Chicken pox, Dengue",Symptom-severity.csv (public dataset),2026-09-10
+redness_of_eyes,Redness Of Eyes,5,Moderate,1,Common Cold,Symptom-severity.csv (public dataset),2026-09-10
+restlessness,Restlessness,5,Moderate,2,"Diabetes, Hyperthyroidism",Symptom-severity.csv (public dataset),2026-09-10
+runny_nose,Runny Nose,5,Moderate,1,Common Cold,Symptom-severity.csv (public dataset),2026-09-10
+rusty_sputum,Rusty Sputum,4,Moderate,1,Pneumonia,Symptom-severity.csv (public dataset),2026-09-10
+scurring,Scurring,2,Low,1,Acne,Symptom-severity.csv (public dataset),2026-09-10
+shivering,Shivering,5,Moderate,1,Allergy,Symptom-severity.csv (public dataset),2026-09-10
+silver_like_dusting,Silver Like Dusting,2,Low,1,Psoriasis,Symptom-severity.csv (public dataset),2026-09-10
+sinus_pressure,Sinus Pressure,4,Moderate,1,Common Cold,Symptom-severity.csv (public dataset),2026-09-10
+skin_peeling,Skin Peeling,3,Low,1,Psoriasis,Symptom-severity.csv (public dataset),2026-09-10
+skin_rash,Skin Rash,3,Low,7,"Acne, Chicken pox, Dengue, Drug Reaction, Fungal infection",Symptom-severity.csv (public dataset),2026-09-10
+slurred_speech,Slurred Speech,4,Moderate,1,Hypoglycemia,Symptom-severity.csv (public dataset),2026-09-10
+small_dents_in_nails,Small Dents In Nails,2,Low,1,Psoriasis,Symptom-severity.csv (public dataset),2026-09-10
+spinning_movements,Spinning Movements,6,High,1,(vertigo) Paroymsal  Positional Vertigo,Symptom-severity.csv (public dataset),2026-09-10
+spotting_urination,Spotting Urination,6,High,1,Drug Reaction,Symptom-severity.csv (public dataset),2026-09-10
+stiff_neck,Stiff Neck,4,Moderate,2,"Arthritis, Migraine",Symptom-severity.csv (public dataset),2026-09-10
+stomach_bleeding,Stomach Bleeding,6,High,1,Hepatitis E,Symptom-severity.csv (public dataset),2026-09-10
+stomach_pain,Stomach Pain,5,Moderate,2,"Drug Reaction, GERD",Symptom-severity.csv (public dataset),2026-09-10
+sunken_eyes,Sunken Eyes,3,Low,1,Gastroenteritis,Symptom-severity.csv (public dataset),2026-09-10
+sweating,Sweating,3,Low,6,"Heart attack, Hyperthyroidism, Hypoglycemia, Malaria, Pneumonia",Symptom-severity.csv (public dataset),2026-09-10
+swelled_lymph_nodes,Swelled Lymph Nodes,6,High,3,"Chicken pox, Common Cold, Tuberculosis",Symptom-severity.csv (public dataset),2026-09-10
+swelling_joints,Swelling Joints,5,Moderate,2,"Arthritis, Osteoarthristis",Symptom-severity.csv (public dataset),2026-09-10
+swelling_of_stomach,Swelling Of Stomach,7,High,1,Alcoholic hepatitis,Symptom-severity.csv (public dataset),2026-09-10
+swollen_blood_vessels,Swollen Blood Vessels,5,Moderate,1,Varicose veins,Symptom-severity.csv (public dataset),2026-09-10
+swollen_extremeties,Swollen Extremeties,5,Moderate,1,Hypothyroidism,Symptom-severity.csv (public dataset),2026-09-10
+swollen_legs,Swollen Legs,5,Moderate,1,Varicose veins,Symptom-severity.csv (public dataset),2026-09-10
+throat_irritation,Throat Irritation,4,Moderate,1,Common Cold,Symptom-severity.csv (public dataset),2026-09-10
+toxic_look_(typhos),Toxic Look (typhos),5,Moderate,1,Typhoid,Symptom-severity.csv (public dataset),2026-09-10
+ulcers_on_tongue,Ulcers On Tongue,4,Moderate,1,GERD,Symptom-severity.csv (public dataset),2026-09-10
+unsteadiness,Unsteadiness,4,Moderate,1,(vertigo) Paroymsal  Positional Vertigo,Symptom-severity.csv (public dataset),2026-09-10
+visual_disturbances,Visual Disturbances,3,Low,1,Migraine,Symptom-severity.csv (public dataset),2026-09-10
+vomiting,Vomiting,5,Moderate,17,"(vertigo) Paroymsal  Positional Vertigo, Alcoholic hepatitis, Chronic cholestasis, Dengue, GERD",Symptom-severity.csv (public dataset),2026-09-10
+watering_from_eyes,Watering From Eyes,4,Moderate,1,Allergy,Symptom-severity.csv (public dataset),2026-09-10
+weakness_in_limbs,Weakness In Limbs,7,High,1,Cervical spondylosis,Symptom-severity.csv (public dataset),2026-09-10
+weakness_of_one_body_side,Weakness Of One Body Side,4,Moderate,1,Paralysis (brain hemorrhage),Symptom-severity.csv (public dataset),2026-09-10
+weight_gain,Weight Gain,3,Low,1,Hypothyroidism,Symptom-severity.csv (public dataset),2026-09-10
+weight_loss,Weight Loss,3,Low,4,"Diabetes, Hyperthyroidism, Jaundice, Tuberculosis",Symptom-severity.csv (public dataset),2026-09-10
+yellow_crust_ooze,Yellow Crust Ooze,3,Low,1,Impetigo,Symptom-severity.csv (public dataset),2026-09-10
+yellow_urine,Yellow Urine,4,Moderate,1,Hepatitis B,Symptom-severity.csv (public dataset),2026-09-10
+yellowing_of_eyes,Yellowing Of Eyes,4,Moderate,7,"Chronic cholestasis, Hepatitis B, Hepatitis C, Hepatitis D, Hepatitis E",Symptom-severity.csv (public dataset),2026-09-10
+yellowish_skin,Yellowish Skin,3,Low,8,"Alcoholic hepatitis, Chronic cholestasis, Hepatitis B, Hepatitis C, Hepatitis D",Symptom-severity.csv (public dataset),2026-09-10

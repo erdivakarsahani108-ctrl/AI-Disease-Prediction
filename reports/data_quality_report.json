@@ -1,0 +1,20 @@
+{
+  "n_records": 10301,
+  "n_diseases": 41,
+  "n_symptom_features": 131,
+  "missing_value_pct": 0.0,
+  "duplicate_pct": 0.0,
+  "invalid_record_pct": 0.0,
+  "class_imbalance_ratio": 54.55,
+  "min_class_count": 11,
+  "max_class_count": 600,
+  "synthetic_pct": 97.05,
+  "real_pct": 2.95,
+  "source_coverage": {
+    "synthetic_augmentation": 9997,
+    "kaggle_disease_symptom_dataset": 304
+  },
+  "ambiguous_symptom_patterns_shared_across_diseases": 335,
+  "ambiguous_pattern_note": "These are symptom combinations that map to more than one disease in the dataset - a genuine real-world diagnostic ambiguity (several diseases can share an identical presenting symptom set), not a data-cleaning defect.",
+  "data_quality_score": 61
+}

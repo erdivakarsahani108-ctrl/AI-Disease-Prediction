@@ -1,0 +1,193 @@
+"""
+scripts/prepare_data.py
+========================
+Reproducible Data-Science pipeline step 1: DATA PREPARATION.
+
+    Raw Data (data/raw/*.csv - public source, see docs/data_sources.md)
+        -> Data Cleaning (symptom token standardization)
+        -> Data Integration (real + synthetic-augmented records)
+        -> Duplicate Removal
+        -> Missing Value Handling
+        -> Symptom Standardization
+        -> Feature Engineering (one-hot symptom matrix)
+        -> Class Balancing (bounded per-disease augmentation)
+        -> Data Validation
+        -> Final Dataset -> data/processed/disease_dataset.csv
+
+Run:
+    python scripts/prepare_data.py
+"""
+
+from __future__ import annotations
+
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+import pandas as pd
+
+from src.preprocessing.augment import generate_synthetic_records
+from src.preprocessing.categories import get_category
+from src.preprocessing.clean import (
+    build_disease_symptom_pool,
+    load_real_disease_symptom_sets,
+    load_symptom_vocabulary,
+)
+from src.utils.paths import (
+    DATA_DICTIONARY_MD,
+    FINAL_DATASET_CSV,
+    RANDOM_SEED,
+    SYMPTOM_VOCAB_JSON,
+)
+from src.utils.text import to_display_name
+
+TARGET_RECORDS_PER_DISEASE = 600  # -> ~10,000+ total across 41 diseases (see docs/dataset_methodology.md)
+
+
+def build_wide_matrix(rows: pd.DataFrame, vocab: list[str]) -> pd.DataFrame:
+    """Turn (disease, symptoms-tuple, synthetic_flag, source) rows into the
+    final wide one-hot-encoded dataset."""
+    data = []
+    for i, row in enumerate(rows.itertuples(index=False), start=1):
+        symptom_set = set(row.symptoms)
+        record = {
+            "record_id": f"REC{i:06d}",
+            "disease": row.disease,
+            "disease_category": get_category(row.disease),
+            "symptoms": ", ".join(sorted(symptom_set)),
+            "symptom_count": len(symptom_set),
+            "source": row.source,
+            "synthetic_flag": row.synthetic_flag,
+        }
+        for s in vocab:
+            record[s] = 1 if s in symptom_set else 0
+        data.append(record)
+    return pd.DataFrame(data)
+
+
+def validate(df: pd.DataFrame, vocab: list[str]) -> dict:
+    issues = []
+    n_missing_disease = df["disease"].isna().sum()
+    if n_missing_disease:
+        issues.append(f"{n_missing_disease} rows with missing disease label")
+
+    zero_symptom_rows = (df[vocab].sum(axis=1) == 0).sum()
+    if zero_symptom_rows:
+        issues.append(f"{zero_symptom_rows} rows with zero symptoms (dropped)")
+        df = df[df[vocab].sum(axis=1) > 0].reset_index(drop=True)
+
+    dup_full = df.duplicated(subset=vocab + ["disease"]).sum()
+    if dup_full:
+        issues.append(f"{dup_full} fully duplicate (disease+symptom-pattern) rows found and removed")
+        df = df.drop_duplicates(subset=vocab + ["disease"]).reset_index(drop=True)
+
+    class_counts = df["disease"].value_counts()
+    imbalance_ratio = round(class_counts.max() / class_counts.min(), 2)
+
+    report = {
+        "n_records": len(df),
+        "n_diseases": df["disease"].nunique(),
+        "n_symptoms": len(vocab),
+        "n_real_records": int((~df["synthetic_flag"]).sum()),
+        "n_synthetic_records": int(df["synthetic_flag"].sum()),
+        "class_imbalance_ratio_max_min": imbalance_ratio,
+        "min_class_count": int(class_counts.min()),
+        "max_class_count": int(class_counts.max()),
+        "issues_found_and_fixed": issues,
+    }
+    return df, report
+
+
+def write_data_dictionary(vocab: list[str], report: dict) -> None:
+    lines = [
+        "# Data Dictionary\n",
+        "Generated automatically by `scripts/prepare_data.py`. Describes every",
+        "column in `data/processed/disease_dataset.csv`.\n",
+        "## Summary\n",
+        f"- Total records: **{report['n_records']}**",
+        f"- Real records (from public source): **{report['n_real_records']}**",
+        f"- Synthetic-augmented records: **{report['n_synthetic_records']}**",
+        f"- Diseases: **{report['n_diseases']}**",
+        f"- Symptom features: **{report['n_symptoms']}**\n",
+        "## Columns\n",
+        "| Column | Type | Description |",
+        "|---|---|---|",
+        "| `record_id` | string | Unique identifier for the record, e.g. `REC000001` |",
+        "| `disease` | string | Target label - the diagnosed/associated disease name |",
+        "| `disease_category` | string | Curated body-system category (organizational only, see `src/preprocessing/categories.py`) |",
+        "| `symptoms` | string | Comma-separated human-readable list of active symptoms for this record |",
+        "| `symptom_count` | int | Number of active symptoms in the record |",
+        "| `source` | string | `kaggle_disease_symptom_dataset` for real records, `synthetic_augmentation` for generated ones |",
+        "| `synthetic_flag` | bool | `False` = real record from the public source dataset. `True` = synthetically generated by resampling validated symptom subsets (see `docs/dataset_methodology.md`) |",
+    ]
+    for s in vocab:
+        lines.append(f"| `{s}` | int (0/1) | One-hot flag: 1 if **{to_display_name(s)}** is present |")
+
+    lines.append("\n## Data Quality Notes\n")
+    for issue in report["issues_found_and_fixed"]:
+        lines.append(f"- {issue}")
+    if not report["issues_found_and_fixed"]:
+        lines.append("- No structural data quality issues found during validation.")
+
+    DATA_DICTIONARY_MD.parent.mkdir(parents=True, exist_ok=True)
+    DATA_DICTIONARY_MD.write_text("\n".join(lines), encoding="utf-8")
+
+
+def main():
+    print("=" * 60)
+    print("STEP 1/2: Loading & cleaning raw source data")
+    print("=" * 60)
+    vocab_df = load_symptom_vocabulary()
+    vocab = vocab_df["Symptom"].tolist()
+    real_df = load_real_disease_symptom_sets()
+    print(f"Real unique disease-symptom combinations after dedup: {len(real_df)}")
+    print(f"Duplicate rows removed from raw source: {real_df.attrs.get('duplicate_rows_removed')}")
+
+    pool = build_disease_symptom_pool(real_df)
+
+    print("=" * 60)
+    print("STEP 2/2: Synthetic augmentation for class balance & dataset size")
+    print("=" * 60)
+    synth_df = generate_synthetic_records(
+        real_df, pool, target_per_disease=TARGET_RECORDS_PER_DISEASE, seed=RANDOM_SEED
+    )
+    print(f"Synthetic records generated: {len(synth_df)}")
+
+    real_df = real_df.copy()
+    real_df["source"] = "kaggle_disease_symptom_dataset"
+    real_df["synthetic_flag"] = False
+
+    synth_df["source"] = "synthetic_augmentation"
+    synth_df["synthetic_flag"] = True
+
+    combined = pd.concat([real_df, synth_df], ignore_index=True)
+    combined = combined.sample(frac=1, random_state=RANDOM_SEED).reset_index(drop=True)
+
+    wide = build_wide_matrix(combined, vocab)
+    wide, report = validate(wide, vocab)
+
+    FINAL_DATASET_CSV.parent.mkdir(parents=True, exist_ok=True)
+    wide.to_csv(FINAL_DATASET_CSV, index=False)
+    print(f"\nSaved final dataset -> {FINAL_DATASET_CSV} ({len(wide)} rows)")
+
+    vocab_payload = {
+        "symptoms": vocab,
+        "severity_weight": dict(zip(vocab_df["Symptom"], vocab_df["severity_weight"].astype(int))),
+    }
+    SYMPTOM_VOCAB_JSON.write_text(json.dumps(vocab_payload, indent=2), encoding="utf-8")
+    print(f"Saved symptom vocabulary -> {SYMPTOM_VOCAB_JSON} ({len(vocab)} symptoms)")
+
+    write_data_dictionary(vocab, report)
+    print(f"Saved data dictionary -> {DATA_DICTIONARY_MD}")
+
+    print("\n" + "=" * 60)
+    print("DATA PREPARATION SUMMARY")
+    print("=" * 60)
+    for k, v in report.items():
+        print(f"{k}: {v}")
+
+
+if __name__ == "__main__":
+    main()

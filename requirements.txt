@@ -1,0 +1,56 @@
+# ==========================================================
+# AI-Based Disease Prediction & Intelligent Health Assistant
+# Python dependencies (tested with Python 3.13)
+# ==========================================================
+
+# --- Core Data Science ---
+pandas>=2.2,<3.0
+numpy>=1.26,<3.0
+scipy>=1.11
+
+# --- Machine Learning ---
+scikit-learn>=1.4
+xgboost>=2.0
+joblib>=1.3
+
+# --- Explainable AI ---
+shap>=0.44
+
+# --- NLP ---
+nltk>=3.8
+rapidfuzz>=3.6
+
+# --- Visualization ---
+plotly>=5.20
+matplotlib>=3.8
+seaborn>=0.13
+networkx>=3.2
+kaleido>=0.2.1
+
+# --- Frontend ---
+streamlit>=1.32,<1.40
+starlette>=0.37,<0.39
+
+# --- Reporting ---
+fpdf2>=2.7
+
+# --- Utilities ---
+python-dotenv>=1.0
+
+# --- Testing ---
+pytest>=8.0
+
+# --- Notebooks (for notebooks/*.ipynb) ---
+nbformat>=5.9
+nbclient>=0.9
+ipykernel>=6.29
+jupyter_client>=8.6
+
+# ==========================================================
+# OPTIONAL / FUTURE SCOPE (not required for core app to run)
+# ----------------------------------------------------------
+# mlflow            -> optional experiment tracking backend
+# umap-learn        -> optional UMAP embedding (PCA/t-SNE used by default)
+# SpeechRecognition -> optional voice input (requires PyAudio/microphone)
+# sentence-transformers -> optional semantic embeddings for symptom search
+# ==========================================================
