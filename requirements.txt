@@ -1,62 +1,57 @@
 # ==========================================================
 # AI-Based Disease Prediction & Intelligent Health Assistant
-# Python dependencies (tested with Python 3.13)
+# Streamlit Community Cloud compatible
 # ==========================================================
 
 # --- Core Data Science ---
 pandas>=2.2,<3.0
-numpy>=1.26,<3.0
-scipy>=1.11
+numpy>=2.0,<3.0
+scipy>=1.13,<2.0
 
 # --- Machine Learning ---
-scikit-learn>=1.4
-xgboost>=2.0
-joblib>=1.3
+scikit-learn>=1.5,<2.0
+xgboost>=2.1,<4.0
+joblib>=1.4,<2.0
 
 # --- Explainable AI ---
-shap>=0.44
+shap>=0.46,<1.0
 
 # --- NLP ---
-nltk>=3.8
-rapidfuzz>=3.6
+nltk>=3.9,<4.0
+rapidfuzz>=3.9,<4.0
 
 # --- Visualization ---
-plotly>=5.20
-matplotlib>=3.8
-seaborn>=0.13
-networkx>=3.2
-kaleido>=0.2.1
+plotly>=5.24,<7.0
+matplotlib>=3.9,<4.0
+seaborn>=0.13,<1.0
+networkx>=3.4,<4.0
+kaleido>=1.0,<2.0
+Pillow>=12.1.1,<13.0
 
 # --- Frontend ---
-streamlit>=1.32,<1.40
-starlette>=0.37,<0.39
+streamlit>=1.45,<2.0
 
 # --- Reporting ---
-fpdf2>=2.7
+fpdf2>=2.8,<3.0
 
 # --- Utilities ---
-python-dotenv>=1.0
+python-dotenv>=1.0,<2.0
 
 # --- Testing ---
-pytest>=8.0
+pytest>=8.3,<9.0
 
-# --- Notebooks (for notebooks/*.ipynb) ---
-nbformat>=5.9
-nbclient>=0.9
-ipykernel>=6.29
-jupyter_client>=8.6
+# --- Notebooks ---
+nbformat>=5.10,<6.0
+nbclient>=0.10,<1.0
+ipykernel>=6.29,<7.0
+jupyter_client>=8.6,<9.0
 
 # ==========================================================
-# OPTIONAL / FUTURE SCOPE (not required for core app to run)
-# ----------------------------------------------------------
-# mlflow            -> optional experiment tracking backend
-# umap-learn        -> optional UMAP embedding (PCA/t-SNE used by default)
-# SpeechRecognition -> optional voice input (requires PyAudio/microphone)
-# sentence-transformers -> optional semantic embeddings for symptom search
-#
-# Declared project tech stack (see README.md -> Technology Stack) not yet
-# used by the current implementation - uncomment when the corresponding
-# feature (see src/models/README.md, database/README.md) is built:
-# tensorflow>=2.16     -> deep-learning model experiments (src/models/)
-# mysql-connector-python>=8.3  -> MySQL persistence layer (database/, src/database/)
+# OPTIONAL / FUTURE SCOPE
 # ==========================================================
+# mlflow
+# umap-learn
+# SpeechRecognition
+# sentence-transformers
+# tensorflow
+# mysql-connector-python
